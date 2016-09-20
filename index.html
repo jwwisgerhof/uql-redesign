@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.css">
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+  <script type="application/javascript" src="scripts/app.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body ng-app="app">
+
+  <section layout="row" flex layout-fill>
+    <!-- Side navigation -->
+    <md-sidenav
+      class="md-sidenav-left"
+      md-component-id="left"
+      md-is-locked-open="$mdMedia('gt-md')"
+      md-whiteframe="4">
+      <md-toolbar class="sidenav-logo">
+        <a href="http://www.uq.edu.au">
+          <img src="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg" />
+        </a>
+      </md-toolbar>
+      <md-content class="sidenav-menu" role="navigation" md-scroll-y layout="column" flex>
+        <md-sidemenu locked="true">
+
+          <md-sidemenu-button href="#">Home</md-sidemenu-button>
+
+          <md-sidemenu-group>
+            <md-sidemenu-content md-heading="Library services" md-arrow="true">
+              <md-sidemenu-button href="#">for Students</md-sidemenu-button>
+              <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
+            </md-sidemenu-content>
+          </md-sidemenu-group>
+
+          <md-sidemenu-group>
+            <md-sidemenu-content md-heading="Research tools & techniques" md-arrow="true">
+              <md-sidemenu-button href="#">for Students</md-sidemenu-button>
+              <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
+            </md-sidemenu-content>
+          </md-sidemenu-group>
+          <md-sidemenu-group>
+            <md-sidemenu-content md-heading="Collections" md-arrow="true">
+              <md-sidemenu-button href="#">for Students</md-sidemenu-button>
+              <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
+            </md-sidemenu-content>
+          </md-sidemenu-group>
+          <md-sidemenu-group>
+            <md-sidemenu-content md-heading="Borrowing & requesting" md-arrow="true">
+              <md-sidemenu-button href="#">for Students</md-sidemenu-button>
+              <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
+            </md-sidemenu-content>
+          </md-sidemenu-group>
+          <md-sidemenu-group>
+            <md-sidemenu-content md-heading="Locations & hours" md-arrow="true">
+              <md-sidemenu-button href="#">for Students</md-sidemenu-button>
+              <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
+            </md-sidemenu-content>
+          </md-sidemenu-group>
+          <md-sidemenu-group>
+            <md-sidemenu-content md-heading="About" md-arrow="true">
+              <md-sidemenu-button href="#">for Students</md-sidemenu-button>
+              <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
+            </md-sidemenu-content>
+          </md-sidemenu-group>
+          <md-sidemenu-button href="#">Contact us</md-sidemenu-button>
+          <md-sidemenu-button href="#">Logout</md-sidemenu-button>
+        </md-sidemenu>
+      </md-content>
+    </md-sidenav>
+
+    <!-- Content -->
+    <md-content flex layout-padding>
+      The content
+    </md-content>
+
+  </section>
+
+</body>
+</html>
