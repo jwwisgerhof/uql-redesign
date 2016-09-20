@@ -2,12 +2,39 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+md-sidenav md-content, md-sidenav md-content .md-sidemenu .md-button  {
+  background-color: #eee;
+}
+
 md-sidenav md-toolbar.sidenav-logo {
   background-color: #49075E;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 md-sidenav md-toolbar.sidenav-logo a {
   text-align: center;
+}
+
+md-toolbar.site-toolbar {
+  background: #fff;
+  color: #000;
+}
+
+.publication-metric-count {
+  background-color: #EEE;
+  padding: 10px;
+  border-left: 1px solid #CCC;
+}
+
+.publication-metric-count:last-child {
+  margin-right: -16px;
+}
+
+.publication-metric-count .md-title {
+  line-height: 20px;
+}
+
+.publication-metric-count .md-caption {
+  line-height: 16px;
 }

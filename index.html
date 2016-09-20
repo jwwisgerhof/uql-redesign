@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.css">
 
   <!-- Angular Material Library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
 
   <script type="application/javascript" src="scripts/app.js"></script>
+  <script type="application/javascript" src="scripts/HomeController.js"></script>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body ng-app="app">
@@ -40,6 +41,7 @@
         <md-sidemenu locked="true">
 
           <md-sidemenu-button href="#">Home</md-sidemenu-button>
+          <md-divider></md-divider>
 
           <md-sidemenu-group>
             <md-sidemenu-content md-heading="Library services" md-arrow="true">
@@ -48,46 +50,54 @@
             </md-sidemenu-content>
           </md-sidemenu-group>
 
+          <md-divider></md-divider>
+
           <md-sidemenu-group>
             <md-sidemenu-content md-heading="Research tools & techniques" md-arrow="true">
               <md-sidemenu-button href="#">for Students</md-sidemenu-button>
               <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
             </md-sidemenu-content>
           </md-sidemenu-group>
+          <md-divider></md-divider>
           <md-sidemenu-group>
             <md-sidemenu-content md-heading="Collections" md-arrow="true">
               <md-sidemenu-button href="#">for Students</md-sidemenu-button>
               <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
             </md-sidemenu-content>
           </md-sidemenu-group>
+          <md-divider></md-divider>
           <md-sidemenu-group>
             <md-sidemenu-content md-heading="Borrowing & requesting" md-arrow="true">
               <md-sidemenu-button href="#">for Students</md-sidemenu-button>
               <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
             </md-sidemenu-content>
           </md-sidemenu-group>
+          <md-divider></md-divider>
           <md-sidemenu-group>
             <md-sidemenu-content md-heading="Locations & hours" md-arrow="true">
               <md-sidemenu-button href="#">for Students</md-sidemenu-button>
               <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
             </md-sidemenu-content>
           </md-sidemenu-group>
+          <md-divider></md-divider>
           <md-sidemenu-group>
             <md-sidemenu-content md-heading="About" md-arrow="true">
               <md-sidemenu-button href="#">for Students</md-sidemenu-button>
               <md-sidemenu-button href="#">for Researchers</md-sidemenu-button>
             </md-sidemenu-content>
           </md-sidemenu-group>
+          <md-divider></md-divider>
           <md-sidemenu-button href="#">Contact us</md-sidemenu-button>
+          <md-divider></md-divider>
           <md-sidemenu-button href="#">Logout</md-sidemenu-button>
         </md-sidemenu>
       </md-content>
     </md-sidenav>
 
     <!-- Content -->
-    <md-content flex layout-padding>
-      The content
-    </md-content>
+    <div layout="column" role="main" flex>
+      <home></home>
+    </div>
 
   </section>
 
