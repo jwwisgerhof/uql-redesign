@@ -1,0 +1,44 @@
+<md-content>
+  <md-toolbar style="background: #333; color: #fff">
+    <div class="md-toolbar-tools">Computer availability</div>
+  </md-toolbar>
+  <md-content layout="column">
+    <md-list layout="column" ng-cloak>
+      <md-divider></md-divider>
+      <md-list-item ng-click="null" layout-align="space-around stretch" ng-repeat="item in vm.computers" class="md-body-1" style="position: relative;">
+        <div style="z-index: 3" layout="row" layout-align="space-around stretch" flex>
+          <span>{{item.name}}</span>
+          <span flex></span>
+          <span><strong>{{item.free}} out of {{item.total}}</strong></span>
+        </div>
+        <md-divider></md-divider>
+
+        <div class="progress-container"></div>
+        <div class="progress-free" ng-style="vm.getTransform(item)"></div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</md-content>
+
+<style type="text/css">
+  .progress-container {
+    background-color: rgba(255,0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    right:0;
+    left:0;
+    bottom: 1px;
+    z-index: 1;
+  }
+
+  .progress-free {
+    background-color: rgba(0, 200, 2, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform-origin: left center;
+    bottom: 1px;
+    z-index: 2;
+  }
+</style>

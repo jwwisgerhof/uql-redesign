@@ -1,181 +1,34 @@
-<md-toolbar class="site-toolbar" md-whiteframe="4">
-  <div class="md-toolbar-tools">
-    <md-button class="md-icon-button md-primary" aria-label="Menu" ng-hide="vm.$mdMedia('gt-md')" ng-click="vm.toggleMenu()">
-      <md-icon>menu</md-icon>
-    </md-button>
-    <span class="md-headline">Library</span>
-    <md-icon>chevron_right</md-icon>
-    <span class="md-title">Home</span>
-    <span flex></span>
-    <span class="md-subhead">
-      Jan-Willem Wisgerhof &nbsp;&nbsp;&nbsp;
-    </span>
-    <img src="https://avatars0.githubusercontent.com/u/14814116?v=3&s=466" style="width: 30px;" />
-  </div>
-</md-toolbar>
-<md-content md-scroll-y layout="row" flex layout-align="space-between start" layout-wrap >
-  <!-- Search -->
-  <!-- Your updates -->
-  <section style="padding: 8px" layout="column" flex="100">
-    <md-content md-whiteframe="1">
-      <md-toolbar style="background-color: #49075E">
-        <div class="md-toolbar-tools">UQ Library Search</div>
-      </md-toolbar>
-      <md-content layout="column" layout-gt-sm="row" layout-padding layout-align="space-around center">
-        <md-input-container style="min-width: 150px;">
-          <label>Search</label>
-          <md-select ng-model="vm.searchType">
-            <md-option ng-value="'Library'">
-              <md-icon>local_library</md-icon> &nbsp;&nbsp;&nbsp;Library
-            </md-option>
-            <md-option ng-value="'Books'">
-              <md-icon>book</md-icon> &nbsp;&nbsp;&nbsp;Books
-            </md-option>
-            <md-option ng-value="'Journal Articles'">
-              <md-icon>insert_drive_file</md-icon> &nbsp;&nbsp;&nbsp;Journal Articles
-            </md-option>
-            <md-option ng-value="'Video & Audio'">
-              <md-icon>audiotrack</md-icon> &nbsp;&nbsp;&nbsp;Video & Audio
-            </md-option>
-          </md-select>
-        </md-input-container>
-        <md-input-container flex style="margin-bottom:0">
-          <label>Find books, articles, databases, conferences and more</label>
-          <input ng-model="vm.search">
-        </md-input-container>
-        <md-button class="md-primary md-raised" style="padding-right: 20px;">
-          <md-icon>search</md-icon>
-          <span>SEARCH</span>
-        </md-button>
-      </md-content>
-    </md-content>
-  </section>
+<toolbar></toolbar>
+<md-content md-scroll-y layout="row" flex layout-align="start stretch" layout-wrap>
 
   <!-- Blog 1 -->
-  <section flex-gt-sm="33" flex-gt-xs="45" flex="100">
-    <md-card>
-      <img src="images/blog1.png" style="max-width: 100%" />
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">Belvedere Woman</span>
-        </md-card-title-text>
-      </md-card-title>
-      <md-card-content class="md-body-1">
-        The UQ Library invites you to the launch of Belvedere Woman, the latest book by Ian Callinan AC.
-        He will be joined in conversation by fellow author Emeritus Professor Michael Wilding from the University of
-        Sydney. The book is set in Brisbane between the 1950's and 2000 and is a story about how snobbery ruined
-        a young woman's life.
-      </md-card-content>
-    </md-card>
-  </section>
+  <div class="tile" flex="100" flex-gt-xs="50" flex-gt-sm="33" layout="column" layout-align="stretch">
+    <blog blog="vm.blogs[0]" flex md-whiteframe="1"></blog>
+  </div>
 
   <!-- Blog 2 -->
-  <section flex-gt-sm="33" flex-gt-xs="45" flex="100">
-    <md-card>
-      <img src="images/blog2.png" style="max-width: 100%" />
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">UQ Library Excellence Award</span>
-        </md-card-title-text>
-      </md-card-title>
-      <md-card-content class="md-body-1">
-        The UQ Library Excellence Award is presented annually to up to three UQ undergraduate students who
-        demonstrate excellence in the use of the Library to enhance their studies.<br /><br />
-        The Award also acknowledges how Library resources support teaching and learning
-      </md-card-content>
-    </md-card>
-  </section>
+  <div class="tile" flex="100" flex-gt-xs="50" flex-gt-sm="33" layout="column" layout-align="stretch">
+    <blog blog="vm.blogs[1]" flex md-whiteframe="1"></blog>
+  </div>
 
   <!-- Your updates -->
-  <section style="padding: 8px" layout="column" flex-gt-sm="33" flex-gt-xs="45" flex="100">
-    <md-content md-whiteframe="1">
-      <md-toolbar style="background-color: #49075E">
-        <div class="md-toolbar-tools">Your Updates</div>
-      </md-toolbar>
-      <md-content layout="column">
-        <md-list layout="column" ng-cloak>
-          <md-list-item ng-click="null">
-            <md-icon>room</md-icon>
-            <p class="md-body-1">Your next class is '<strong>ENG001</strong>' in Room 123, Duhig North (14:00)</p>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item ng-click="null">
-            <md-icon>library_books</md-icon>
-            <p class="md-body-1">Your loan 'Best design practices in 2016' is due in 2 days!</p>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item ng-click="null">
-            <md-icon>mail</md-icon>
-            <p class="md-body-1">You have <strong>5</strong> unread emails</p>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item ng-click="null">
-            <md-icon class="md-accent">warning</md-icon>
-            <p class="md-body-1">You have <strong>$13.49</strong> overdue charges.</p>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item>
-            <span flex></span>
-            <span class="md-body-1">Printing balance: $4.00</span>
-          </md-list-item>
-        </md-list>
-      </md-content>
-    </md-content>
-  </section>
+  <div class="tile" flex="100" flex-gt-xs="50" flex-gt-sm="33" layout="column" layout-align="stretch">
+    <your-updates flex md-whiteframe="1" layout="row" layout-align="stretch"></your-updates>
+  </div>
 
   <!-- Publication Metrics -->
-  <section style="padding: 8px" layout="column" flex-gt-sm="33" flex-gt-xs="45" flex="100">
-    <md-content md-whiteframe="1">
-      <md-toolbar style="background: #333; color: #fff">
-        <div class="md-toolbar-tools">Publication Metrics</div>
-      </md-toolbar>
-      <md-content layout="column">
-        <md-list layout="column" ng-cloak>
-          <md-list-item ng-click="null" layout-align="space-around stretch">
-            <p class="md-body-1">Web of Science</p>
-            <div class="publication-metric-count" layout="column" layout-align="space-around center">
-              <span class="md-title">3</span>
-              <span class="md-caption">h-index</span>
-            </div>
-            <div class="publication-metric-count" layout="column" layout-align="space-around center">
-              <span class="md-title">12</span>
-              <span class="md-caption">papers</span>
-            </div>
-            <div class="publication-metric-count" layout="column" layout-align="space-around center">
-              <span class="md-title">107</span>
-              <span class="md-caption">citations</span>
-            </div>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item ng-click="null" layout-align="space-around stretch">
-            <p class="md-body-1">Scopus</p>
-            <div class="publication-metric-count" layout="column" layout-align="space-around center">
-              <span class="md-title">3</span>
-              <span class="md-caption">h-index</span>
-            </div>
-            <div class="publication-metric-count" layout="column" layout-align="space-around center">
-              <span class="md-title">20</span>
-              <span class="md-caption">papers</span>
-            </div>
-            <div class="publication-metric-count" layout="column" layout-align="space-around center">
-              <span class="md-title">173</span>
-              <span class="md-caption">citations</span>
-            </div>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item ng-click="null">
-            <md-icon>trending_up</md-icon>
-            <p class="md-body-1">See more metrics</p>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item ng-click="null">
-            <md-icon>subdirectory_arrow_right</md-icon>
-            <p class="md-body-1">See all research support</p>
-          </md-list-item>
-          <md-divider></md-divider>
-        </md-list>
-      </md-content>
-    </md-content>
-  </section>
+  <div class="tile" flex="100" flex-gt-xs="50" flex-gt-sm="33" layout="column" layout-align="stretch">
+    <publication-metrics flex md-whiteframe="1"></publication-metrics>
+  </div>
+
+  <!-- Computers -->
+  <div class="tile" flex="100" flex-gt-xs="50" flex-gt-sm="33" layout="column" layout-align="stretch">
+    <computers flex md-whiteframe="1"></computers>
+  </div>
+
+  <!-- Hours -->
+  <div class="tile" flex="100" flex-gt-xs="50" flex-gt-sm="33" layout="column" layout-align="stretch">
+    <hours flex md-whiteframe="1" layout="row" layout-align=></hours>
+  </div>
 
 </md-content>

@@ -1,0 +1,96 @@
+<div
+    layout="column"
+    class="small-row"
+    ng-hide="vm.$mdMedia('gt-md')">
+  <div layout="row" class="logo-row" style="background-color: #49075E; padding: 20px;">
+    <!-- Menu -->
+    <md-button class="md-icon-button" aria-label="Menu" ng-click="vm.toggleMenu()" style="position: absolute; left: 0; top: 32px">
+      <md-icon style="color: #FFF; font-size: 28px">menu</md-icon>
+    </md-button>
+
+    <!-- UQ Logo -->
+    <div flex style="text-align: center">
+      <a href="http://www.uq.edu.au">
+          <img src="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg" style="width: 200px; max-width: 100%" />
+        </a>
+    </div>
+  </div>
+  <div layout="column" layout-gt-sm="row" layout-align-gt-sm="space-around center" layout-align="space-around stretch" class="action-row" style="background-color: #333; color: #fff; padding-left: 10px; padding-right: 10px;">
+    <md-input-container style="min-width: 150px;">
+      <label>Search</label>
+      <md-select ng-model="vm.searchType">
+        <md-option ng-value="'Library'">
+          <md-icon>local_library</md-icon> &nbsp;&nbsp;&nbsp;Library
+        </md-option>
+        <md-option ng-value="'Books'">
+          <md-icon>book</md-icon> &nbsp;&nbsp;&nbsp;Books
+        </md-option>
+        <md-option ng-value="'Journal Articles'">
+          <md-icon>insert_drive_file</md-icon> &nbsp;&nbsp;&nbsp;Journal Articles
+        </md-option>
+        <md-option ng-value="'Video & Audio'">
+          <md-icon>audiotrack</md-icon> &nbsp;&nbsp;&nbsp;Video & Audio
+        </md-option>
+      </md-select>
+    </md-input-container>&nbsp;&nbsp;&nbsp;
+    <md-input-container flex style="margin-bottom:0">
+      <label>Find books, articles, databases, conferences and more</label>
+      <input ng-model="vm.search">
+    </md-input-container>
+
+    <md-button class="md-primary md-raised">
+      <md-icon>search</md-icon>
+      <span>SEARCH</span>
+    </md-button>
+
+    <span flex ng-hide="vm.$mdMedia('gt-sm')">&nbsp;</span>
+  </div>
+</div>
+
+<div class="action-row"
+     layout="row"
+     layout-align="space-between center"
+     ng-show="vm.$mdMedia('gt-md')"
+     ng-class="{ dark: vm.$mdMedia('gt-md') }">
+  <!-- Menu button -->
+  <div class="menu-button-container" ng-hide="vm.$mdMedia('gt-md')">
+    <md-button class="md-icon-button" aria-label="Menu" ng-click="vm.toggleMenu()">
+      <md-icon style="color: #FFF">menu</md-icon>
+    </md-button>
+  </div>
+
+  <!-- UQ Library title -->
+  <span flex ng-hide="vm.$mdMedia('gt-xs')" class="md-headline">
+    Library Search
+  </span>
+
+  <!-- Search form -->
+  <div flex layout="row" layout-align="space-around center" style="padding-left:20px;" ng-show="vm.$mdMedia('gt-xs')">
+    <md-input-container style="min-width: 150px;">
+      <label>Search</label>
+      <md-select ng-model="vm.searchType" style="margin-top: -6px;">
+        <md-option ng-value="'Library'">
+          <md-icon>local_library</md-icon> &nbsp;&nbsp;&nbsp;Library
+        </md-option>
+        <md-option ng-value="'Books'">
+          <md-icon>book</md-icon> &nbsp;&nbsp;&nbsp;Books
+        </md-option>
+        <md-option ng-value="'Journal Articles'">
+          <md-icon>insert_drive_file</md-icon> &nbsp;&nbsp;&nbsp;Journal Articles
+        </md-option>
+        <md-option ng-value="'Video & Audio'">
+          <md-icon>audiotrack</md-icon> &nbsp;&nbsp;&nbsp;Video & Audio
+        </md-option>
+      </md-select>
+    </md-input-container>&nbsp;&nbsp;&nbsp;
+    <md-input-container flex style="margin-bottom:0">
+      <label>Find books, articles, databases, conferences and more</label>
+      <input ng-model="vm.search">
+    </md-input-container>
+
+    <md-button class="md-primary md-raised" style="padding-right: 10px; margin-right: 16px;">
+      <md-icon>search</md-icon>
+      <span>SEARCH</span>
+    </md-button>
+  </div>
+</div>

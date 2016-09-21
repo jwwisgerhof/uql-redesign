@@ -2,23 +2,59 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/** Sidenav **/
 md-sidenav md-content, md-sidenav md-content .md-sidemenu .md-button  {
   background-color: #eee;
 }
 
 md-sidenav md-toolbar.sidenav-logo {
   background-color: #49075E;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 md-sidenav md-toolbar.sidenav-logo a {
   text-align: center;
 }
 
-md-toolbar.site-toolbar {
-  background: #fff;
-  color: #000;
+/** Toolbar **/
+toolbar {
+}
+
+toolbar .header-logo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #49075E;
+}
+
+toolbar .action-row {
+  min-height: 60px;
+  background-color: #49075E;
+  color: #FFF;
+}
+
+toolbar .action-row.dark {
+  background-color: #333;
+}
+
+toolbar .menu-button-container {
+  border-right: 1px solid #FFF;
+  margin-right: 10px;
+}
+
+toolbar md-select-value, toolbar label, toolbar .md-input, toolbar md-select-value md-icon {
+  color: #FFF !important;
+  border-bottom-color: #FFF !important;
+}
+
+/** Others **/
+blog {
+  padding: 8px;
+  display: block;
+}
+
+home .tile {
+  padding: 8px;
 }
 
 .publication-metric-count {
