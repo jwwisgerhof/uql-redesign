@@ -1,0 +1,77 @@
+{
+  "responses": {
+    "breakpoints": {
+      "sm": "430px",
+      "md": "768px",
+      "lg": "992px",
+      "xl": "1500px"
+    },
+    "cols": {
+      "sm": 1,
+      "md": 2,
+      "lg": 3,
+      "xl": 4
+    },
+    "collapse": "sm"
+  },
+  "features": {
+    "focus": true,
+    "flip": true,
+    "pulse": true
+  },
+  "aesthetics": {
+    "panelGap": "5px",
+    "panelPadding": "20px",
+    "borderRadius": "10px",
+    "flipSizes": {
+      "sm": "200px",
+      "md": "300px",
+      "lg": "400px"
+    }
+  },
+  "blocks": {
+    "layout": {
+      "lbl": "dw",
+      "els": {
+        "focus-curtain": "focus-curtain"
+      }
+    },
+    "panel": {
+      "lbl": "dw-panel",
+      "els": {
+        "content": "content"
+      }
+    },
+    "flip": {
+      "lbl": "dw-flip",
+      "els": {
+        "panel": "panel",
+        "content": "content"
+      }
+    },
+    "cluster": {
+      "lbl": "dw-cluster",
+      "els": {
+        "segment": "segment"
+      }
+    }
+  },
+  "mods": {
+    "cluster": "cluster",
+    "segment": "segment",
+    "small": "sm",
+    "medium": "md",
+    "large": "lg",
+    "vertical": "vertical",
+    "horizontal": "horizontal",
+    "quarter": "quart",
+    "half": "half",
+    "flip": "flip",
+    "front": "front",
+    "back": "back",
+    "focus": "focus",
+    "pulse": "pulse",
+    "column": "col",
+    "row": "row"
+  }
+}
